@@ -1,0 +1,47 @@
+{
+  "name": "unicorn-web-front-end-workspace",
+  "version": "1.0.0",
+  "description": "Workspace for seminars of WFE course",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonas Vaclavek",
+  "license": "ISC",
+  "dependencies": {
+    "core-js": "^2.4.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.5",
+    "babel-core": "^6.8.0",
+    "babel-eslint": "^8.2.1",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "babel-preset-stage-1": "^6.22.0",
+    "css-loader": "^0.28.9",
+    "eslint": "^4.16.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-import-resolver-webpack": "^0.8.4",
+    "eslint-loader": "^1.5.0",
+    "eslint-plugin-babel": "^4.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.16.1",
+    "json-loader": "^0.5.4",
+    "node-sass": "^4.7.2",
+    "postcss-loader": "^2.0.10",
+    "rimraf": "^2.5.2",
+    "sass-loader": "^6.0.6",
+    "raw-loader": "^0.5.1",
+    "stats-webpack-plugin": "^0.6.2",
+    "style-loader": "^0.20.1",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.11.1"
+  }
+}
