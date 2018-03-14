@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+	<meta charset="UTF-8">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>HTML 5 Form Elements</title>
+</head>
+<body>
+<main>
+	<header>
+		<h1>HTML 5 Form elements</h1>
+	</header>
+	<nav>
+		<a href="index.html">HTML</a> |
+		<a href="forms.html">Forms</a>
+	</nav>
+	<section>
+		<form autocomplete="on" id="form" oninput="x.value=parseInt(number.value)+parseInt(range.value)">
+			<div>
+				<label for="range">Range input</label>
+				<input type="range" id="range" value="50">
+			</div>
+			<div>
+				<label for="number">Number input</label>
+				<input type="number" id="number" value="50">
+			</div>
+			<div>
+				Range + number =
+				<output name="x" for="range number"></output>
+			</div>
+			<hr />
+			<div>
+				Numbers: <input type="number" name="points" step="3">
+			</div>
+			<hr />
+			<div>
+				<label for="datalist">Datalist</label>
+				<input id="datalist" list="browsers">
+				<datalist id="browsers">
+					<option value="Internet Explorer">
+					<option value="Firefox">
+					<option value="Chrome">
+					<option value="Opera">
+					<option value="Safari">
+				</datalist>
+			</div>
+			<hr />
+			<div>
+				Autocomplete: <input type="email" name="email"><br>
+			</div>
+			<div>
+				No autocomplete: <input type="email" name="email" autocomplete="off"><br>
+			</div>
+			<hr />
+			<div>
+				Autofocus:<input type="text" name="autofocus" autofocus>
+			</div>
+			<hr />
+			<div>
+				<input type="image" src="../assets/logo.png" alt="Submit" width="48" height="48">
+			</div>
+			<div>
+				Enter a date before 1980-01-01:
+				<input type="date" name="maxday" max="1979-12-31">
+			</div>
+			<div>
+				Enter a date after 2000-01-01:
+				<input type="date" name="minday" min="2000-01-02">
+			</div>
+			<div>
+				Quantity (between 1 and 5):
+				<input type="number" name="quantity" min="1" max="5">
+			</div>
+			<div>
+				Select images: <input type="file" name="img" multiple accept="image/jpeg">
+			</div>
+			<div>
+				Country code: <input type="text" name="country_code" pattern="[A-Za-z]{3}"
+									 title="Three letter country code">
+			</div>
+			<div>
+				Placeholder: <input type="text" name="placeholder" placeholder="First name">
+			</div>
+			<div>
+				Username: <input type="text" name="usrname" required>
+			</div>
+			<div>
+				<input type="submit">
+			</div>
+		</form>
+	</section>
+	<section>
+		Last name: <input type="text" name="name_out_of_the_form" form="form">
+	</section>
+	<section>
+		<form novalidate>
+			No validate: <input type="email" name="user_email">
+			<input type="submit">
+		</form>
+	</section>
+</main>
+</body>
+</html>

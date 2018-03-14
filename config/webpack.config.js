@@ -88,16 +88,8 @@ module.exports = {
 			filename: 'index.html'
 		}),
 		new HtmlWebpackPlugin({
-			filename: 'offers.html',
-			template: 'src/offers.html'
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'company.html',
-			template: 'src/company.html'
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'contacts.html',
-			template: 'src/contacts.html'
+			filename: 'forms.html',
+			template: 'src/forms.html'
 		}),
 		new DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify('development')
