@@ -38,8 +38,10 @@ Checkout to branch *seminar-02* or download [source code](https://github.com/vac
 Checkout to branch *seminar-03* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-03) to see the solution of the third seminar. Compare the source code of *companyHTML5.html* and *company.html* files to see the differences in tags being used. The rest of the source code is same as in the branch *seminar-02*
 
 ## Seminar 04
-Checkout to branch *seminar-03* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-04) to see the solution of the fourth seminar. [Run the project](#run-the-code) and see the result. Pay attention to changes in *companyHTML5.html* and *style.scss* files. Note that even though the file extension is *scss* the file is compiled into *css* file using SASS loader. It means that if you are familiarised with CSS preprocessors, you can use it while styling the application.  
+Checkout to branch *seminar-04* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-04) to see the solution of the fourth seminar. [Run the project](#run-the-code) and see the result. Pay attention to changes in *companyHTML5.html* and *style.scss* files. Note that even though the file extension is *scss* the file is compiled into *css* file using SASS loader. It means that if you are familiarised with CSS preprocessors, you can use it while styling the application.  
 
+## Seminar 05
+Checkout to branch *seminar-03* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-05) to see the solution of the fifth seminar. [Run the project](#run-the-code) and see the result. Pay attention to changes in *style.scss* and *print.css* files. *companyHTML5.html* page from the previous seminar has been enhanced using CSS3 attributes. There is also a new table, which shows the use of pseudoclasses, pseudoelements and more advanced selectors. The *print.css* file does nothing special. It only hides all menus and headers so that only main content remains.
 
 ## Lecture 03
 The branch contains DEMO examples of the HTML5 tags. 
