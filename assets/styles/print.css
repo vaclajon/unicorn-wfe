@@ -1,0 +1,7 @@
+header, nav, #secondary-menu, #fixed {
+    display: none;
+}
+
+article{
+    white-space: normal;
+}
