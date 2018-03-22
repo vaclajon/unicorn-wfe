@@ -10,12 +10,8 @@ div {
     margin-bottom: 0;
   }
 
-  header {
-    display: block;
-  }
-
   nav {
-    background-color: green;
+    background-color: #061539;
     padding: 20px 0;
     text-align: center;
   }
@@ -26,71 +22,75 @@ div {
     padding: 0 10px;
   }
 
-  article {
-    position: relative;
-    width: 80%;
-    min-height: 1px;
-    white-space: pre-line;
-    padding-left: 20px;
-  }
-
   section {
     display: flex;
   }
 
-  footer{
+  article {
+    flex: 0 0 80%;
+    white-space: pre-line;
+    padding-left: 20px;
+  }
+
+  footer {
     background-color: #343a40;
     color: white;
   }
 
-  .page-header{
-    background-color: #dd12aa;
+  .page-header {
+    background-color: #7887AB;
     display: flex;
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif ;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
     text-decoration: underline;
-    text-decoration-color: darkred;
+    text-decoration-color: #061539;
+    color: white;
+    justify-content: center;;
   }
 
- #brand{
-   position: relative;
-   display: flex;
-   flex-wrap: wrap;
-   padding: 10px;
-   background-color: #343a40;
- }
+  #brand {
+    padding: 10px;
+    background-color: #2E4172;
+  }
+  #brand a {
+    float: left;
+  }
 
-  #brand h2{
-    color: white;
+  #brand h2 {
+    color: rgb(255, 255, 255);
     font-size: 2em;
   }
 
   #secondary-menu {
-    position: relative;
-    width: 20%;
+    flex: 0 0 20%;
     background-color: lightgray;
     text-align: center;
   }
 
-  #secondary-menu ul{
+  #secondary-menu ul {
     list-style: none;
-    padding: 0;
+    padding: 10px 10px;
   }
 
-  #secondary-menu ul li{
+  #secondary-menu li {
     padding: 10px;
-    border: 2px solid darkred;
+    border: 2px solid #061539;
     border-radius: 5px;
     margin-bottom: 5px;
   }
 
-  #fixed{
+  #secondary-menu a {
+    color: #061539;
+  }
+
+  #fixed {
     position: fixed;
     top: 50%;
-    right: -20px;
-    background-color: blue;
+    right: -30px;
+    background-color: #4267b2;
     color: white;
-    padding: 5px;
+    padding: 5px 10px;
     transform: rotate(-90deg);
     border-radius: 5px;
+    border: 1px solid #061539;
   }
 }
