@@ -28,6 +28,10 @@ div {
     padding: 0 10px;
   }
 
+  nav a:hover {
+    color: #7887AB;
+  }
+
   article {
     white-space: pre-line;
     padding-left: 20px;
@@ -57,7 +61,7 @@ div {
       font-size: 0.5em;
     }
 
-    td::before{
+    td::before {
       content: '> ';
       padding-left: 5px;
     }
@@ -120,6 +124,15 @@ div {
     border: 2px solid #061539;
     border-radius: 5px;
     margin-bottom: 5px;
+  }
+
+  #secondary-menu li:hover {
+    background-color: #7887AB;
+  }
+
+  #secondary-menu li:hover a {
+    color: white;
+    text-decoration: none;
   }
 
   #secondary-menu a {
