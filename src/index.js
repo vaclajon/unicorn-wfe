@@ -65,7 +65,7 @@ colors[colors.length] = "yellow";
 console.log('colors[10] = "brown"');
 colors[10] = "brown";
 console.log("new value of colors " + colors);
-console.log("value of colors[9 " + colors[9]);
+console.log("value of colors[9] " + colors[9]);
 
 console.log("join colors by , " + colors.join(', '));
 console.log("get last element of colors using pop " + colors.pop());
@@ -124,3 +124,74 @@ console.log(gen());
 
 var gen2 = generator(15);
 console.log(gen2());
+
+
+var genArray = function (length) {
+	var array = [];
+	for (var i = 0; i < length; i++) {
+		array.push(Math.random());
+	}
+	return array;
+};
+
+console.log(genArray(5));
+
+
+var dayInWeek = function () {
+	var day = prompt("Type in a number");
+	if (!day) {
+		return;
+	}
+
+	day = parseInt(day);
+	if (typeof day !== 'number' || !Number.isInteger(day) || day < 1 || day > 7) {
+		console.log("Invalid number");
+		return;
+	}
+
+	switch (day) {
+		case 1:
+			return 'monday';
+		case 2:
+			return 'tuesday';
+		case 3:
+			return 'wednesday';
+		case 4:
+			return 'thursday';
+		case 5:
+			return 'friday';
+		case 6:
+			return 'saturday';
+		case 7:
+			return 'sunday';
+	}
+};
+
+dayInWeek();
+
+function attrsByPattern(obj, pattern) {
+	var prop;
+	var reg = new RegExp(pattern);
+	for (prop in obj) {
+		if (reg.test(prop)) {
+			console.log(obj[prop]);
+		}
+	}
+}
+
+var pattern = 'newForm';
+var obj = {
+	'newFormValue': 5, 'newFormNextValue': 'value', 'oldData': 'not print'
+};
+
+attrsByPattern(obj, pattern);
+
+function f(obj, fnName, numOfAtts) {
+	if (numOfAtts !== arguments.length - 3) {
+		return false;
+	}
+
+	return obj[fnName].apply(obj, Array.prototype.slice.call(arguments).slice(3));
+}
+
+console.log(f(colors, "join", 1, " | "));
