@@ -41,7 +41,13 @@ Checkout to branch *seminar-03* or download [source code](https://github.com/vac
 Checkout to branch *seminar-04* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-04) to see the solution of the fourth seminar. [Run the project](#run-the-code) and see the result. Pay attention to changes in *companyHTML5.html* and *style.scss* files. Note that even though the file extension is *scss* the file is compiled into *css* file using SASS loader. It means that if you are familiarised with CSS preprocessors, you can use it while styling the application.  
 
 ## Seminar 05
-Checkout to branch *seminar-03* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-05) to see the solution of the fifth seminar. [Run the project](#run-the-code) and see the result. Pay attention to changes in *style.scss* and *print.css* files. *companyHTML5.html* page from the previous seminar has been enhanced using CSS3 attributes. There is also a new table, which shows the use of pseudoclasses, pseudoelements and more advanced selectors. The *print.css* file does nothing special. It only hides all menus and headers so that only main content remains.
+Checkout to branch *seminar-05* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-05) to see the solution of the fifth seminar. [Run the project](#run-the-code) and see the result. Pay attention to changes in *style.scss* and *print.css* files. *companyHTML5.html* page from the previous seminar has been enhanced using CSS3 attributes. There is also a new table, which shows the use of pseudoclasses, pseudoelements and more advanced selectors. The *print.css* file does nothing special. It only hides all menus and headers so that only main content remains.
+
+## Seminar 06
+Checkout to branch *seminar-06* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-06) to see the solution of the sixth seminar. [Run the project](#run-the-code), open developer tool and see the result in the console. Each section of the seminar task has dedicated part in the *index.js*. Note that only few functions of each object have been used. Full list of available fuction can be found at [w3schools](https://www.w3schools.com/js/). 
+
+## Seminar 07
+Checkout to branch *seminar-07* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-07) to see the solution of the seventh seminar. [Run the project](#run-the-code) and access [localhost:3000](http://localhost:3000). Content of the page is wrapped using jQuery UI tabs. The first tab is implemented using pure js without jQuery library, the second tab is same as the first one rewritten using jQuery, the last tab shows another features of the jQuery UI
 
 ## Lecture 03
 The branch contains DEMO examples of the HTML5 tags. 
