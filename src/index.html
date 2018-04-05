@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
-	<meta charset="UTF-8">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>My first project</title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>My first project</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <!--<script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>-->
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
 </head>
 <body>
-<h1>Open developer tool to see the output</h1>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">JS</a></li>
+        <li><a href="#tabs-2">jQuery</a></li>
+        <li><a href="#tabs-3">jQuery UI</a></li>
+    </ul>
+    <div id="tabs-1">
+        <section id="left">
+            <form id="myForm">
+                <label for="firstNumber">First Number</label><input id="firstNumber" type="number">
+                <label for="secondNumber">Second Number</label><input id="secondNumber" type="number">
+                <input type="submit" value="Submit">
+            </form>
+            <div id="result"></div>
+            <hr />
+            <a href="https://www.google.com">Some link without target in definition</a>
+            <hr />
+            <button onclick="generateUl()">Generate ul</button>
+            <button id="removeLists">Remove ul</button>
+        </section>
+    </div>
+    <div id="tabs-2">
+        <section id="right">
+            <form id="myForm2">
+                <label for="firstNumber2">First Number</label><input id="firstNumber2" type="number">
+                <label for="secondNumber2">Second Number</label><input id="secondNumber2" type="number">
+                <input type="submit" value="Submit">
+            </form>
+            <div id="result2"></div>
+            <hr />
+            <a href="https://www.google.com">Some link without target in definition</a>
+            <hr />
+            <button onclick="generateUl2()">Generate ul</button>
+            <button id="removeLists2">Remove ul</button>
+        </section>
+    </div>
+    <div id="tabs-3">
+        <div>
+            <p>Date: <input type="text" id="datepicker"></p>
+        </div>
+        <button id="opener">Open Dialog</button>
+        <button id="makeSortable">Make ul sortable</button>
+    </div>
+
+</div>
+<div id="dialog" title="Basic dialog">
+    <p>This is an animated dialog which is useful for displaying information. The dialog window can be moved,
+        resized and closed with the 'x' icon.</p>
+</div>
 </body>
 </html>

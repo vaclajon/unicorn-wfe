@@ -4,6 +4,7 @@
   "description": "Workspace for seminars of WFE course",
   "main": "index.js",
   "scripts": {
+    "build": "./node_modules/.bin/webpack --config config/prod.config.js",
     "start": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
