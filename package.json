@@ -6,7 +6,9 @@
   "scripts": {
     "build": "./node_modules/.bin/webpack --config config/prod.config.js",
     "start": "./node_modules/.bin/webpack-dev-server --config ./config/webpack.config.js --progress --colors",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "rest": "nodemon ./server/server.js",
+    "app+rest": "concurrently --kill-others \"npm run start\" \"npm run rest\""
   },
   "author": "Jonas Vaclavek",
   "license": "ISC",
@@ -21,6 +23,7 @@
     "babel-polyfill": "^6.8.0",
     "babel-preset-es2015": "^6.6.0",
     "babel-preset-stage-1": "^6.22.0",
+    "concurrently": "^3.5.1",
     "css-loader": "^0.28.9",
     "eslint": "^4.16.0",
     "eslint-config-standard": "^11.0.0-beta.0",
@@ -34,11 +37,13 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-plugin": "^2.16.1",
     "json-loader": "^0.5.4",
+    "json-server": "^0.12.1",
     "node-sass": "^4.7.2",
+    "nodemon": "^1.17.3",
     "postcss-loader": "^2.0.10",
+    "raw-loader": "^0.5.1",
     "rimraf": "^2.5.2",
     "sass-loader": "^6.0.6",
-    "raw-loader": "^0.5.1",
     "stats-webpack-plugin": "^0.6.2",
     "style-loader": "^0.20.1",
     "url-loader": "^0.6.2",
