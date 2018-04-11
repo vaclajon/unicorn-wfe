@@ -10,5 +10,63 @@
     <script type="text/javascript" src="../assets/js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
+<div class="container-fluid">
+    <div class="row" id="header-wrapper"></div>
+    <button class="btn btn-success" id="newBtn">New Contact</button>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered table-striped table-hover" id="contacts">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Address</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <form class="row" id="editForm" style="display: none">
+                <div class="col-4 form-group">
+                    <label for="firstName">First Name</label>
+                    <input class="form-control" type="text" id="firstName" name="firstName">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="lastName">Last Name</label>
+                    <input class="form-control" type="text" id="lastName" name="lastName">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" type="email" id="email" name="email">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="age">Age</label>
+                    <input class="form-control" type="number" id="age" name="age">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="mobile">Mobile</label>
+                    <input class="form-control" type="tel" id="mobile" name="mobile">
+                </div>
+                <div class="col-4 form-group">
+                    <label for="address">Address</label>
+                    <select class="form-control" id="address" name="addressId">
+                        <option selected disabled>Choose address</option>
+                    </select>
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 </html>
