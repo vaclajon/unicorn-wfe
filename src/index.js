@@ -28,17 +28,13 @@ $(function () {
 			params.data = data;
 		}
 
-		return $.ajax(params).done(function (response) {
-			if (successFn) {
-				return successFn(response);
-			}
-			return response
-		}).fail(function (xhr, error) {
-			if (failFn) {
-				failFn(xhr, error)
-			}
-			return xhr;
-		})
+		return $.ajax(params)
+			.done(function (response) {
+				return successFn ? successFn(response) : response;
+			})
+			.fail(function (xhr, error) {
+				return failFn ? failFn(xhr, error) : xhr;
+			})
 	}
 
 	function createRow(address, contact) {
@@ -50,31 +46,35 @@ $(function () {
 			.addClass('btn btn-danger remove-btn')
 			.text('Remove');
 
-		var $tr = $('<tr>').append(
-			$('<td>').text(contact.id),
-			$('<td>').text(contact.firstName),
-			$('<td>').text(contact.lastName),
-			$('<td>').text(contact.email),
-			$('<td>').text(contact.age),
-			$('<td>').text(contact.mobile),
-			$('<td>').text(JSON.stringify(address)),
-			$('<td>').append($editBtn).append($deleteBtn)
-		);
+		var $tr = $('<tr>')
+			.append(
+				$('<td>').text(contact.id),
+				$('<td>').text(contact.firstName),
+				$('<td>').text(contact.lastName),
+				$('<td>').text(contact.email),
+				$('<td>').text(contact.age),
+				$('<td>').text(contact.mobile),
+				$('<td>').text(JSON.stringify(address)),
+				$('<td>')
+					.append($editBtn)
+					.append($deleteBtn)
+			);
 		return $tr;
 	}
-
 
 	function handleContacts(response) {
 		var $rows = [];
 		var deferrs = $.map(response, function (contact, index) {
-			return ajax(getAddressUrl(contact.addressId)).done(function (address) {
-				$rows.push(createRow(address, contact));
-			});
+			return ajax(getAddressUrl(contact.addressId))
+				.done(function (address) {
+					$rows.push(createRow(address, contact));
+				});
 		});
 
-		$.when.apply($, deferrs).done(function () {
-			$contactsTbl.find('tbody').html($rows);
-		})
+		$.when.apply($, deferrs)
+			.done(function () {
+				$contactsTbl.find('tbody').html($rows);
+			})
 	}
 
 	function handleAddress(response) {
@@ -93,16 +93,6 @@ $(function () {
 		});
 		$editForm.fadeIn();
 	}
-
-	$('#header-wrapper').load('../assets/templates/header.html');
-
-	$.get('../assets/templates/header.html')
-		.done(function (response) {
-			$('#header-wrapper').append(response);
-		})
-		.fail(function (xhr, error) {
-			console.log("There has been some problem. The error is: ", error)
-		});
 
 	function loadContacts() {
 		return ajax(contactsUrl).done(handleContacts);
@@ -127,12 +117,21 @@ $(function () {
 		}
 	}
 
+	$('#header-wrapper').load('../assets/templates/header.html');
+
+	$.get('../assets/templates/header.html')
+		.done(function (response) {
+			$('#header-wrapper').append(response);
+		})
+		.fail(function (xhr, error) {
+			console.log("There has been some problem. The error is: ", error)
+		});
+
 	$('#newBtn').click(function () {
 		$editForm.fadeIn();
 		resetForm();
 		editId = null;
 	});
-
 
 	$contactsTbl.on('click', '.edit-btn', function () {
 		var contactId = $(this).data('contactId');
@@ -147,7 +146,6 @@ $(function () {
 		}
 		ajax(getContactUrl(contactId), null, null, 'DELETE').done(loadContacts);
 	});
-
 
 	$editForm.submit(function () {
 		var method = 'POST';
@@ -172,6 +170,9 @@ $(function () {
 	});
 
 	loadContacts();
-	ajax('http://localhost:8080/api/address').done(handleAddress)
+	fetch('http://localhost:8080/api/address')
+		.then(function (response) {
+			return response.json();
+		})
+		.then(handleAddress);
 });
-
