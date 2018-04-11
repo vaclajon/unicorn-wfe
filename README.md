@@ -49,5 +49,13 @@ Checkout to branch *seminar-06* or download [source code](https://github.com/vac
 ## Seminar 07
 Checkout to branch *seminar-07* or download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-07) to see the solution of the seventh seminar. [Run the project](#run-the-code) and access [localhost:3000](http://localhost:3000). Content of the page is wrapped using jQuery UI tabs. The first tab is implemented using pure js without jQuery library, the second tab is same as the first one rewritten using jQuery, the last tab shows another features of the jQuery UI
 
+## Seminar 08
+Checkout to branch *seminar-08* of download [source code](https://github.com/vaclajon/unicorn-wfe/tree/seminar-08) to see the solution of the eight seminar. Update node dependencies and run the application with following code
+```bash
+npm i
+npm run app+rest
+```
+Front-end application is again available at [localhost:3000](http://localhost:3000), but this time there is also a back-end server at [localhost:8080](http://localhost:8080) which serves data from *server/db.json* file (See [json-server](https://github.com/typicode/json-server)). Use the server to fetch data using AJAX methods provided by either jQuery or fetch API. 
+
 ## Lecture 03
 The branch contains DEMO examples of the HTML5 tags. 
