@@ -17,17 +17,36 @@ function showPosition(location) {
 		zoom: 10,
 		center: location
 	});
-	var marker = new google.maps.Marker({
+
+	new google.maps.Marker({
 		position: location,
 		map: map
 	});
 }
 
-function showMap() {
+function getLocationFromUrl() {
+	const params = new URLSearchParams(location.search);
+
+	if (params.has('latitude') && params.has('longitude')) {
+		return {
+			lat: parseFloat(params.get('latitude')),
+			lng: parseFloat(params.get('longitude'))
+		}
+	}
+
+	return false;
+}
+
+function getLocationFromStorage() {
 	var location = localStorage.getItem("geoLocation");
+	return location ? JSON.parse(location) : false;
+}
+
+function showMap() {
+	var location = getLocationFromUrl() || getLocationFromStorage();
 
 	if (location) {
-		showPosition(JSON.parse(location));
+		showPosition(location);
 	}
 	else {
 		getCoords(function (location) {
