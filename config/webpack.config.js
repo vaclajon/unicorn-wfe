@@ -20,10 +20,11 @@ module.exports = {
 		'core-js/es6/function.js',
 		'core-js/es6/string.js',
 
-		'webpack-dev-server/client?http://localhost:3000',
+		'react-hot-loader/patch',
+		`webpack-dev-server/client?http://localhost:${PORT}`,
 		'webpack/hot/only-dev-server',
 
-		path.join(ABSOLUTE_BASE, 'src/index.js')
+		path.join(ABSOLUTE_BASE, 'src/index.jsx')
 
 	],
 	output: {
@@ -38,9 +39,19 @@ module.exports = {
 				use: ['style-loader', 'css-loader']
 			},
 			{
-				test: /\.(js)?$/,
+				test: /\.(js|jsx)?$/,
 				exclude: /node_modules/,
-				loader: 'babel-loader'
+				loader: 'babel-loader',
+				options: {
+
+					// This is a feature of `babel-loader` for webpack (not Babel itself).
+					// It enables caching results in ./node_modules/.cache/babel-loader/
+					// directory for faster rebuilds.
+					cacheDirectory: true,
+					plugins: [
+						'react-hot-loader/babel'
+					]
+				}
 			},
 			{
 				test: /\.json?$/,
@@ -86,18 +97,6 @@ module.exports = {
 			template: 'src/index.html',
 			inject: 'body',
 			filename: 'index.html'
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'offers.html',
-			template: 'src/offers.html'
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'company.html',
-			template: 'src/company.html'
-		}),
-		new HtmlWebpackPlugin({
-			filename: 'contacts.html',
-			template: 'src/contacts.html'
 		}),
 		new DefinePlugin({
 			'process.env.NODE_ENV': JSON.stringify('development')

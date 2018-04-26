@@ -1,0 +1,52 @@
+{
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "plugins": [
+    "import",
+    "babel",
+    "react"
+  ],
+  "extends": ["eslint:recommended", "plugin:react/all", "plugin:import/errors"],
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./config/webpack.config.js"
+      }
+    }
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "commonjs": true
+  },
+  "rules": {
+    "quotes": ["error", "single"],
+    "indent": ["error", "tab", {"SwitchCase": 1}],
+    "object-curly-spacing": ["error", "always"],
+    "space-before-blocks": ["error", "always"],
+    "space-before-function-paren": ["error", "never"],
+    "curly": ["error", "all"],
+    "react/jsx-indent": ["error", "tab"],
+    "react/forbid-component-props": ["off"],
+    "import/order": ["error", {"newlines-between": "always"}],
+    "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
+    "react/jsx-indent-props": ["error", "tab"],
+    "react/jsx-max-props-per-line": ["error", { "maximum": 4, "when": "always" }],
+    "react/no-set-state": ["off"],
+    "react/prefer-stateless-function": ["off"],
+    "no-multi-spaces": ["error"],
+    "no-trailing-spaces": ["error"],
+    "comma-dangle": ["error", "never"],
+    "react/forbid-foreign-prop-types": ["off"],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "babel/semi": ["error", "always"],
+    "react/no-multi-comp": ["off"],
+    "import/no-unresolved": [2, {"commonjs": true, "amd": true}]
+  }
+}
